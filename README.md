@@ -1,1 +1,1 @@
-The is App for gym workout where u can see your specific exercsies for different muscles
+The is App for gym workout where you can see your specific exercsies for different muscles
