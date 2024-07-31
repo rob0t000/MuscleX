@@ -23,11 +23,13 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.navigation.NavController
+import com.example.musclex.navigation.Screens
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     val gradient = Brush.verticalGradient(
         colors = listOf(
             colorResource(id = R.color.gradient_start_color),
@@ -155,11 +157,10 @@ fun LoginScreen() {
                     Button(
                         onClick = {
 
-                            Log.d("LoginScreen", "User logged in with email: $email")
-                            Log.i("Creds", "Email: $email, Password: $password")
+                           navController.navigate(Screens.Home.route)
                         },
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFFA91818) // Fill with #A91818 color
+                            containerColor = Color(0xFFA91818)
                         ),
                         modifier = Modifier.align(Alignment.CenterHorizontally)
                     ) {
@@ -209,7 +210,7 @@ fun LoginScreen() {
                     painter = painterResource(id = R.drawable.twitter),
                     contentDescription = "Twitter",
                     modifier = Modifier
-                        .size(70.dp)
+                        .size(80.dp)
                         .weight(1f)
                         .padding(16.dp)
                         .clickable {  }
@@ -219,7 +220,7 @@ fun LoginScreen() {
                     painter = painterResource(id = R.drawable.google),
                     contentDescription = "Google",
                     modifier = Modifier
-                        .size(70.dp)
+                        .size(80.dp)
                         .weight(1f)
                         .padding(16.dp)
                         .clickable {  }
@@ -229,7 +230,7 @@ fun LoginScreen() {
                     painter = painterResource(id = R.drawable.facebook),
                     contentDescription = "Facebook",
                     modifier = Modifier
-                        .size(70.dp)
+                        .size(80.dp)
                         .weight(1f)
                         .padding(16.dp)
                         .clickable {  }
