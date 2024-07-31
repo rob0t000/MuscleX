@@ -1,1 +1,1 @@
-This is a simple Login UI for a Gym app made in kotlin
+The is App for gym workout where u can see your specific exercsies for different muscles
